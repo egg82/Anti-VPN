@@ -227,11 +227,10 @@
             <id>papermc-snpashots</id>
             <url>https://papermc.io/repo/repository/maven-snapshots/</url>
         </repository>
-        <!--<repository>
+        <repository>
             <id>bungeecord-repo</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>-->
-
+        </repository>
         <repository>
             <id>egg82-nexus</id>
             <url>https://nexus.egg82.me/repository/maven-releases/</url>
@@ -245,13 +244,13 @@
             <url>https://repo.aikar.co/content/groups/aikar/</url>
         </repository>
 
+        <repository> <!-- for development builds -->
+            <id>sonatype-oss-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
         <repository>
             <id>github-rjenkinsjr</id>
             <url>https://raw.github.com/rjenkinsjr/maven2/repo</url>
-        </repository>
-        <repository>
-            <id>plan</id>
-            <url>https://dl.bintray.com/rsl1122/Plan-repository</url>
         </repository>
         <repository>
             <id>CodeMC</id>
@@ -291,7 +290,7 @@
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-platform-bungeecord</artifactId>
-            <version>${adventure.version}</version>
+            <version>${adventure.bungeecord.version}</version>
         </dependency>
         <dependency>
             <groupId>ninja.egg82</groupId>
@@ -322,10 +321,9 @@
             <version>${bstats.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.djrapitops</groupId>
-            <artifactId>Plan-api</artifactId>
+            <groupId>com.github.plan-player-analytics</groupId>
+            <artifactId>Plan</artifactId>
             <version>${plan.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.luckperms</groupId>
@@ -347,7 +345,7 @@
         <dependency>
             <groupId>net.kyori</groupId>
             <artifactId>adventure-text-minimessage</artifactId>
-            <version>${adventure.version}</version>
+            <version>${minimessage.version}</version>
         </dependency>
         <dependency>
             <groupId>net.oneandone.reflections8</groupId>
